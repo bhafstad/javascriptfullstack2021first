@@ -1,0 +1,149 @@
+body {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.one {
+  /* innestlad grid */
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+
+  /* styr div-elementet */
+  background-color: red;
+  grid-column: 1/6;
+  grid-row: 1/6;
+  animation: changeBackground 7s infinite ease-in-out;
+}
+
+.videoOne {
+  grid-column: 1/11;
+  grid-row: 1/11;
+  align-self: center;
+  justify-self: center;
+}
+
+.titleOne {
+  grid-column: 1/11;
+  grid-row: 1/1;
+  align-self: center;
+  justify-self: center;
+}
+
+.two {
+  /* innestlad grid */
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+
+  /* styr div-elementet */
+  background-color: blue;
+  grid-column: 6/11;
+  grid-row: 1/6;
+}
+
+
+.videoTwo {
+    grid-column: 1/11;
+    grid-row: 1/11;
+    align-self: center;
+    justify-self: center;
+  }
+  
+  .titleTwo {
+    grid-column: 1/11;
+    grid-row: 1/1;
+    align-self: center;
+    justify-self: center;
+  }
+  
+  .three {
+    /* innestlad grid */
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+  
+    /* styr div-elementet */
+    background-color: purple;
+    grid-column: 1/6;
+    grid-row: 6/11;
+  }
+  
+  .videoThree {
+    grid-column: 1/11;
+    grid-row: 1/11;
+    align-self: center;
+    justify-self: center;
+  }
+  
+  .titleThree {
+    grid-column: 1/11;
+    grid-row: 1/1;
+    align-self: center;
+    justify-self: center;
+  }
+  
+  .four {
+    /* innestlad grid */
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+  
+    /* styr div-elementet */
+    background-color: green;
+    grid-column: 6/11;
+    grid-row: 6/11;
+  }
+  
+  .videoFour {
+      grid-column: 1/11;
+      grid-row: 1/11;
+      justify-self: center;
+      align-self: center;
+  }
+  
+  .titleFour {
+      grid-column: 1/11;
+      grid-row: 1/1;
+      justify-self: center;
+      align-self: center;
+  
+  }
+
+  @media only screen and (max-width: 830px) {
+    .one {
+        grid-column: 1/11;
+        grid-row: 1/1;
+    }
+
+    .two {
+        grid-column: 1/11;
+        grid-row: 2/2;
+    }
+
+    .three {
+        grid-column: 1/11;
+        grid-row: 3/3;
+    }
+
+    .four {
+        grid-column: 1/11;
+        grid-row: 4/4;
+    }
+  }
+
+  @keyframes changeBackground {
+      0% {
+          background-color: blue;
+      }
+      100% {
+          background-color: orange;
+      }
+  }
